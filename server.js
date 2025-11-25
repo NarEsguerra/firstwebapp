@@ -13,78 +13,46 @@ const portfolioHTML = `
       font-family: Arial, sans-serif;
       margin: 0;
       padding: 0;
-      background: #f5f5f5;
-      color: #333;
-    }
-    header {
-      background: #222;
-      color: white;
+      background: #eef2f3;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
       text-align: center;
-      padding: 40px 20px;
     }
-    h1 { margin: 0; }
-    section {
-      padding: 20px 40px;
-    }
-    .projects div {
+    .container {
       background: white;
-      padding: 15px;
-      margin: 10px 0;
-      border-radius: 8px;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      padding: 30px 40px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      width: 90%;
+      max-width: 600px;
     }
-    footer {
-      background: #222;
-      color: #aaa;
-      text-align: center;
-      padding: 20px;
-      margin-top: 40px;
+    h1 {
+      margin-bottom: 10px;
+    }
+    h2 {
+      margin-top: 0;
+      color: #555;
+    }
+    p {
+      font-size: 1.1rem;
+      color: #444;
+    }
+    .quote {
+      margin-top: 20px;
+      font-style: italic;
+      color: #333;
     }
   </style>
 </head>
 <body>
 
-<header>
+<div class="container">
   <h1>Nar Anthony S. Esguerra</h1>
-  <p>Web Developer | Designer | Programmer</p>
-</header>
-
-<section>
-  <h2>About Me</h2>
-  <p>
-    Hello! I'm a passionate developer who loves building web applications,
-    experimenting with new technologies, and solving real-world problems.
-  </p>
-</section>
-
-<section class="projects">
-  <h2>Projects</h2>
-
-  <div>
-    <h3>Ilocate Mobile App</h3>
-    <p>A dedicated mobile application for wearable emergency beacon. Built using flutter framework and firebase database</p>
-  </div>
-
-  <div>
-    <h3>Cayanan Resort Reservation</h3>
-    <p>A website built using html/css, php and mysql</p>
-  </div>
-
-  <div>
-    <h3>Gym membership app</h3>
-    <p>Built using c# use to perform </p>
-  </div>
-</section>
-
-<section>
-  <h2>Contact</h2>
-  <p>Email: naresguerra02@gmail.com</p>
-  <p>GitHub: github.com/NarEsguerra</p>
-</section>
-
-<footer>
-  <p>&copy; 2025. All rights reserved.</p>
-</footer>
+  <h2>Class Section: BSIT - 4101 </h2>
+  <p class="quote">"Each and everyone has their own phase, you only just to find yours"</p>
+</div>
 
 </body>
 </html>
