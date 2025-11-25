@@ -9,40 +9,68 @@ const portfolioHTML = `
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>My Portfolio</title>
   <style>
+    :root {
+      --bg: #f6f7f8;
+      --card-bg: #ffffff;
+      --text-main: #2d2d2d;
+      --text-sub: #6a6a6a;
+      --accent: #444444;
+    }
+
     body {
-      font-family: Arial, sans-serif;
+      font-family: 'Segoe UI', sans-serif;
       margin: 0;
       padding: 0;
-      background: #eef2f3;
+      background: var(--bg);
       display: flex;
       justify-content: center;
       align-items: center;
       height: 100vh;
       text-align: center;
+      color: var(--text-main);
     }
+
     .container {
-      background: white;
-      padding: 30px 40px;
-      border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      background: var(--card-bg);
+      padding: 50px 50px;
+      border-radius: 16px;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.08);
       width: 90%;
-      max-width: 600px;
+      max-width: 550px;
+      transition: 0.3s ease;
     }
+
+    .container:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 10px 28px rgba(0,0,0,0.12);
+    }
+
     h1 {
-      margin-bottom: 10px;
+      margin: 0 0 8px;
+      font-size: 2rem;
+      font-weight: 600;
     }
+
     h2 {
-      margin-top: 0;
-      color: #555;
+      margin: 0;
+      color: var(--text-sub);
+      font-size: 1.2rem;
+      font-weight: 400;
     }
-    p {
-      font-size: 1.1rem;
-      color: #444;
-    }
+
     .quote {
-      margin-top: 20px;
+      margin-top: 25px;
+      font-size: 1.1rem;
       font-style: italic;
-      color: #333;
+      color: var(--accent);
+      line-height: 1.6;
+    }
+
+    .line {
+      width: 60%;
+      height: 1px;
+      background: #ddd;
+      margin: 25px auto 0;
     }
   </style>
 </head>
@@ -50,13 +78,16 @@ const portfolioHTML = `
 
 <div class="container">
   <h1>Nar Anthony S. Esguerra</h1>
-  <h2>Class Section: BSIT - 4101 </h2>
-  <p class="quote">"Each and everyone has their own phase, you only just to find yours"</p>
+  <h2>BSIT - 4101</h2>
+  <div class="line"></div>
+  <p class="quote">"Each and everyone has their own phase; you only just need to find yours."</p>
 </div>
 
 </body>
 </html>
 `;
+
+const http = require("http");
 
 const server = http.createServer((req, res) => {
   res.writeHead(200, { "Content-Type": "text/html" });
